@@ -1,5 +1,5 @@
 FROM ubuntu
-WORKDIR app
+WORKDIR /app
 
 RUN apt-get update && apt-get install build-essential curl gcc-avr avr-libc -y
 RUN curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
