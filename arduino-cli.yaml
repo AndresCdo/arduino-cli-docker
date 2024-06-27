@@ -1,25 +1,61 @@
+# This YAML file contains configuration settings for the Arduino CLI tool.
+# It specifies various options related to the board manager, daemon, directories,
+# library, logging, metrics, output, sketch, and updater.
+
 board_manager:
   additional_urls:
   - https://downloads.arduino.cc/packages/package_staging_index.json
+  # Additional URLs for the board manager package index. These URLs are used to
+  # fetch additional board packages for Arduino boards.
+
 daemon:
   port: "50051"
+  # The port number on which the Arduino CLI daemon listens for incoming requests.
+
 directories:
   data: /root/.arduino15
+  # The directory where Arduino CLI stores its data, such as cache and preferences.
+
   downloads: /root/.arduino15/staging
+  # The directory where Arduino CLI downloads and stages files before installation.
+
   user: /root/Arduino
+  # The directory where Arduino CLI expects user sketches and libraries to be located.
+
 library:
   enable_unsafe_install: false
+  # Whether to enable unsafe installation of libraries. If set to true, Arduino CLI
+  # will allow installation of libraries from unverified sources.
+
 logging:
   file: ""
+  # The file path where the log file should be written. If empty, logging is disabled.
+
   format: text
+  # The format of the log messages. Possible values are "text" and "json".
+
   level: info
+  # The log level. Possible values are "trace", "debug", "info", "warn", and "error".
+
 metrics:
   addr: :9090
+  # The address on which the metrics server listens for incoming requests.
+
   enabled: true
+  # Whether to enable metrics collection. If set to true, Arduino CLI will collect
+  # and expose metrics about its usage.
+
 output:
   no_color: false
+  # Whether to disable color output. If set to true, Arduino CLI will not use colors
+  # in its output.
+
 sketch:
   always_export_binaries: false
+  # Whether to always export binaries when compiling sketches. If set to true, Arduino CLI
+  # will export binaries even if the compilation fails.
+
 updater:
   enable_notification: true
-
+  # Whether to enable update notifications. If set to true, Arduino CLI will check for
+  # updates and display notifications if a new version is available.
